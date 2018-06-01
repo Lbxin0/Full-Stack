@@ -1,0 +1,105 @@
+*{
+    padding:0;
+    margin:0
+}
+a:hover{
+    text-decoration:none;
+    color:red;
+    font-weight:bolder;
+    transition-duration:0.5s
+}
+body{
+padding:20px 80px;
+min-width: 700px;
+background:url("../image/background.png") no-repeat center top 
+}
+
+#all {
+width:100%;
+margin:30px auto;
+border:2px solid red;
+padding:35px 40px;
+border-image: linear-gradient( blue,red,rgb(225, 0, 255)) 30 30;
+}
+#content{
+width:100%;
+padding:1px;
+
+}
+#content img{
+display: block;
+margin:10px auto;
+
+}
+.nav{
+    width:100%;
+    display:flex;
+
+}
+.nav .nav-list{
+    box-sizing: border-box;
+    display:inline-block;
+    text-align:center;
+    flex:1;
+    width:100%;
+    cursor:pointer;
+    line-height:160px;
+    border-radius:50%;
+    border:2px solid transparent;
+    margin-right:10PX;
+    background-size: 90%;
+    background-position:center;
+    background-repeat:no-repeat;
+    border-image: linear-gradient( red, blue) 30 30;
+    
+}
+.nav .nav-list:hover{
+    /*background-image: none !important*/
+    background-position: 0 -500PX;
+    transition-duration:1s;
+    filter: blur(0px);
+    border-image:none
+}
+.nav .nav-list:hover .list-add{
+    opacity:1;
+    transition-duration:1s
+}
+.nav-list .list-add{
+    display:block;
+    width:90%;
+    height:90%;
+    border:2px solid #05f1f1;
+    border-radius:50%;
+    margin:4% 4% 4% 5%;
+    font-size: 18px;
+    font-weight:bolder;
+    color:#31a2a2;
+    opacity:0
+   
+}
+.nav .nav-list:nth-child(1){
+    margin-left:15px
+}
+#marquee-txt{
+width:400px;
+margin:2px auto;
+
+}
+#marquee-content{
+color:rgb(255, 0, 242);
+font-weight:bolder;
+font-size: 18px
+}
+
+
+/*幽灵按钮开始*/
+/*#div-btn{ display:flex;justify-content:space-between;}
+#div-group{ height:140px; width:240px; background:blue;transition-duration: 1s ;position:relative;text-align:center;; color:#fff;margin-bottom:12px }
+#div-top{ background:rgba(255,255,255,1); width:0; height:10px; position:absolute; top:0; right:0}
+#div-bottom{ background:rgba(255,255,255,1); width:0; height:10px; position:absolute; bottom:0; left:0}
+#div-group a{ text-decoration:none; color:#fff; font:bold 20px Arial;line-height:140px}
+#div-group:hover{ background:rgba(255, 255, 255, 0.8); transition:.3s}
+#div-group:hover a{ color:blue; transition:.3s}
+#div-group:hover #div-top{ width:100%; transition:.3s; background:blue}
+#div-group:hover #div-bottom{ width:100%;transition:.3s; background:blue}*/
+/*幽灵按钮结束*/

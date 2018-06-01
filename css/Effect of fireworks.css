@@ -1,0 +1,3 @@
+.fire{width:10px; height:20px;position:absolute; background:red; border-radius:100%}
+.more{width:5px; height:3px; background:red;border-radius:50%;position:absolute}
+body{background:#ccc}

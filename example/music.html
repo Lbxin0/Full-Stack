@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>幻声播放</title>
+<style>
+*{ margin:0; padding:0}
+body{ background-image:url(../image/bj-3.jpg); background-size:cover; background-repeat:no-repeat}
+<!--#div-1{ width:260px; height:260px; background-color:#CFC; margin-top:20%; margin-left:50%;}-->
+#ul-1{ transform:rotatex(0deg) rotatey(0deg); transform-style:preserve-3d;width:260px; height:260px; position:absolute; top:150px; left:20%; margin-left:-130px; animation:move 8s linear 0s infinite normal; }
+#ul-1:hover{ animation-play-state:paused}
+#ul-1 li{ background-color:#000}
+#ul-1:hover li img{ opacity:0.5}
+#ul-1 li:hover img{ opacity:1}
+@keyframes move{
+	from{
+		transform: rotatex(0deg)}
+	to{
+		transform:rotateX(360deg);}
+	}
+img{ width:260px; height:260px}
+
+#ul-1 li{ list-style:none; width:260px; height:260px; position:absolute; left:0; top:0;
+		  text-align:center; line-height:260px;}
+#ul-1 li:nth-child(1){
+	transform:translate(130px,0) rotatey(90deg);}
+#ul-1 li:nth-child(2){
+	transform:translate(-130px,0) rotatey(90deg) ;}
+#ul-1 li:nth-child(3){
+	transform:translate(0,130px) rotatex(90deg) rotatex(180deg);}
+#ul-1 li:nth-child(4){
+	transform:translate(0,-130px) rotatex(90deg);}
+#ul-1 li:nth-child(5){
+	transform:translateZ(-130px) rotatex(180deg);}
+#ul-1 li:nth-child(6){
+	transform:translateZ(130px);}
+@keyframes ul-2{
+	from{
+			transform:rotatex(-25deg) rotatey(0deg);
+		}
+	to{
+			transform: rotatex(-25deg) rotatey(360deg)
+		}
+	}
+#ul-2{ position:absolute; left:60%;  top:150px; width:260px; height:260px; transform:rotatex(-25deg); transform-style:preserve-3d; animation: ul-2 12s linear 0s infinite normal }
+#ul-2:hover{
+	animation-play-state:paused}
+#ul-2:hover li img{ opacity:0.5} 
+#ul-2 li:hover img{ opacity:1}
+#ul-2 li{ background-color:#CC9; width:260px; height:260px; list-style:none; font-size:36px; text-align:center; line-height:260px; position:absolute; left:0;top:0; background-color:#000}
+#ul-2 li:nth-child(1){
+	
+	transform:rotatey(60deg) translatez(260px);
+	}
+#ul-2 li:nth-child(2){
+	
+	transform:rotatey(120deg) translatez(260px); position:relative
+	}
+#ul-2 li:nth-child(2) span{
+	
+	transform: translatez(260px); position:absolute;top:0px;left:0px
+	}
+#ul-2 li:nth-child(3){
+	
+	transform:rotatey(180deg) translatez(260px)
+	}
+#ul-2 li:nth-child(4){
+	
+	transform:rotatey(240deg) translatez(260px)
+	}
+#ul-2 li:nth-child(5){
+	
+	transform:rotatey(300deg) translatez(260px)
+	}
+#ul-2 li:nth-child(6){
+	
+	transform:rotatey(360deg) translatez(260px)
+	}
+</style>
+</head>
+
+<body>
+<ul id="ul-1">
+<li></li>
+<li></li>
+<li><a href="./music2.html"><img src="../image/music/g1.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/g2.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/g4.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/2.jpg" /></a></li>
+</ul>
+<ul id="ul-2">
+<li><a href="./music2.html"><img src="../image/music/g4.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/g1.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/g2.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/1.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/2.jpg" /></a></li>
+<li><a href="./music2.html"><img src="../image/music/3.jpg" /></a></li>
+</ul>
+
+
+
+</body>
+</body>
+</html>

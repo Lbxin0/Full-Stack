@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多边形练习</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/Polygon practice.css">
+    <script src="../js/Polygon practice.js"></script>
+</head>
+<body background="images/22.jpg" style="background-size: cover">
+<div id="header">
+    
+
+</div>
+    <div id="all">
+        <div>
+        
+      <ul>
+          <li v-for="image in images"><img :src="image.src" height="258" width="255"/></li>
+      </ul>
+    </div>
+    </div>
+    <script>
+        var app=new Vue({
+            el:"#all",
+            data:{
+                images:[
+                    {src:"../image/Polygon practice/1.jpg"},
+                    {src:"../image/Polygon practice/2.jpg"},
+                    {src:"../image/Polygon practice/3.jpg"},
+                    {src:"../image/Polygon practice/4.jpg"},
+                    {src:"../image/Polygon practice/5.jpg"},
+                    {src:"../image/Polygon practice/6.jpg"},
+                    {src:"../image/Polygon practice/7.jpg"},
+                    {src:"../image/Polygon practice/8.jpg"},
+                    {src:"../image/Polygon practice/9.jpg"},
+                    {src:"../image/Polygon practice/10.jpg"},
+                    {src:"../image/Polygon practice/11.jpg"},
+                    {src:"../image/Polygon practice/12.jpg"},
+                    {src:"../image/Polygon practice/13.jpg"},
+                    {src:"../image/Polygon practice/14.jpg"},
+                    //{src:"../image/Polygon practice/15.jpg"},
+                    //{src:"../image/Polygon practice/16.jpg"},
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

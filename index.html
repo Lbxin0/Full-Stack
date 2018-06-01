@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lbxi科技网</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    
+    <div id="header" class="row">
+        <div class="col-md-1"></div>
+        <div id="header_left" class="col-md-10">
+            <span id="header_left_left"><a href="https://x0516.github.io/-project/welcome.html" style="color:#333333">主页</a></span>
+            <span id="header_left_right">
+                    <span >分享</span>
+                    <span >关注</span>
+                    <span >私信</span>
+            </span>
+        </div> 
+        <div class="col-md-1"></div>   
+    </div>
+    <div class="row">
+            <div class="col-md-1"></div>
+                <div id="header-images" class="col-md-10">
+                    <img src="http://data.useit.com.cn/useitdata/forum/201607/14/165824dtrixh7v7ikirxs2.jpg">
+                </div>
+            <div class="col-md-1"></div>
+    </div>
+    <div class="row" id="about">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div id="about-header">
+                    <div id="about-header-txt">About Me</div>
+                    <div id="about-header-img"><img style="width:250px;" src="http://pic.51yuansu.com/pic3/cover/02/43/26/59e4a2a2c4c0a_610.jpg"></div>
+                </div>
+                <div id="about-content" class="row">
+                    <div class="col-md-1"></div>
+                    <div style="margin-left:-20px" id="about-content-left" class="col-md-3">
+                        <span >basic information</span>
+                        <div id="about-content-left-basic">
+                            <span  id="about-content-left-basic-name">姓名：严昕</span><br>
+                            <span  id="about-content-left-basic-sex">性别：男</span><br>
+                            <span  id="about-content-left-basic-school">学校：XXX大学</span><br>
+                        </div>
+                    </div>
+                    <div id="about-content-middle" class="col-md-4">
+                        <span>Tutorial column</span>
+                        <div id="about-content-left-basic">
+                                <span id="about-content-left-basic-name">前端设计</span><br>
+                                <span id="about-content-left-basic-sex">平面与UI</span><br>
+                                <span id="about-content-left-basic-school">图书专区</span><br>
+                        </div>
+                    
+                    </div>
+                    <div id="about-content-right" class="col-md-3">
+                        <span>Self assessment</span>
+                        <div id="about-content-left-basic">
+                                <span id="about-content-left-basic-name">性格：内向</span><br>
+                                <span id="about-content-left-basic-sex">特色：勤奋朴实</span><br>
+                                <span id="about-content-left-basic-school">方向：前端平面</span><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+    </div>
+    <div class="row" id="skill">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="border-bottom: 2px solid rgb(112, 112, 112);padding-bottom: 15px;">
+            <div id="skill-header">
+                <div id="skill-header-txt">Extra skills</div>
+                <div id="skill-header-img"><img style="width:250px;" src="http://pic.51yuansu.com/pic3/cover/02/43/26/59e4a2a2c4c0a_610.jpg"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <span id="skill-content-PS-out"><span id="skill-content-PS-in">PS</span></span>
+                    <span id="skill-content-PhotoShop">PhotoShop</span>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 ">
+                        <span id="skill-content-PS-out"><span id="skill-content-PS-in">FS</span></span>
+                        <span id="skill-content-Flash">Flash</span>
+                </div>
+                <div class="col-md-3">
+                        <span id="skill-content-PS-out"><span id="skill-content-PS-in">ST</span></span>
+                        <span id="skill-content-sublime-text">sublime-text</span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+</div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="border-bottom: 2px solid rgb(112, 112, 112);padding-bottom: 15px;">
+            <div id="skill-header">
+                <div id="skill-header-txt">Works Collection</div>
+                <div id="skill-header-img"><img style="width:250px;" src="http://pic.51yuansu.com/pic3/cover/02/43/26/59e4a2a2c4c0a_610.jpg"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                    <div id="skill-header-item" class="col-md-10">
+                        <div v-for="item in headerlist">
+                        <div class="col-md-3 skillitems" id="skill-header-item-1"  :style="{backgroundImage:'url(' + item.url + ')'}">
+                            <span><a :href="item.href">{{item.title}}</a></span>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            <div class="col-md-1"></div>
+            </div>
+        <div class="col-md-1"></div>
+    
+</div>
+<script>
+    var app=new Vue({
+    el:'#skill-header-item',
+    data:{
+    headerlist:[
+        {title:"幽灵按钮",href:'./example/Ghost button.html',url:'./image/index/ghost.jpg'},
+        {title:"3D旋转",href:'./example/music.html',url:'./image/index/music1.jpg'},
+        {title:"旋转主页",href:'./example/music2.html',url:'./image/index/RotatingPage.jpg'},
+        {title:"手风琴",href:'./example/Accordion.html',url:'./image/index/Accordion.jpg'},
+        {title:"烟花效果",href:'./example/Effect of fireworks.html',url:'./image/index/fireworks.jpg'},
+        {title:"多边形特效",href:'./example/Polygon practice.html',url:'./image/index/PolygonPractice.jpg'},
+    ]
+    }
+})
+</script>
+</body>
+</html>

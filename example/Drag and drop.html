@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about lbxin</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/Drag and drop.css">
+    <script src="../JS/DragDrop.js"></script>
+    <script>
+        console.log(document.getElementsByTagName('img'));
+        document.getElementsByTagName('img')[0].onmousedown = function(e){
+            e.preventDefault()
+        };
+    </script>
+</head>
+<body >
+<div class="container">
+    <div id="dv1" ondragover="allow(event)" ondrop="drop(event)"></div>
+    <div id="dv2" ondragover="allow(event)" ondrop="drop(event)">
+        <div id="dv22">
+            <img :src="drop.src" draggable="true" ondragstart="drag(event)"  :id="drop.id"  v-for="drop in drops">
+        </div>
+    </div>
+</div>
+<script>
+   var app=new Vue({
+       el:"#dv22",
+       data:{
+           drops:[
+               {src:"../image/music/DZQ/1.jpg",title:"",id:"drag1"},
+               {src:"../image/music/DZQ/2.jpg",title:"",id:"drag2"},
+               {src:"../image/music/DZQ/3.jpg",title:"",id:"drag3"},
+               {src:"../image/music/DZQ/4.jpg",title:"",id:"drag4"},
+               {src:"../image/music/DZQ/55.jpg",title:"",id:"drag1"},
+           ]
+       }
+   })
+    </script>
+</body>
+</html>

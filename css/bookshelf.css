@@ -1,0 +1,47 @@
+body{
+    padding:20px 80px;
+    min-width: 700px;
+    background:url("../image/bookshelf/background.png") no-repeat center top ;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    opacity:1;
+}
+ul li{
+    list-style:none;
+}
+.imgtop{
+    overflow: hidden;
+}
+.bookul{
+    background:url("../image/bookshelf/bookshelfmiddle.jpg") repeat-y left top;
+    width:100%;
+
+}
+.bookul li{
+    display:inline-block;
+    margin-left:10px;
+}
+.bookul li img{
+    width:155px;
+    height:240px;
+    padding:6px 7px 27px 7px;
+    transform: rotateX(10deg);
+    transform-origin:bottom;
+    perspective: 500px;
+}
+.books{
+    position:relative
+}
+.texttop{
+    font-size:18px;
+    color:rgb(0, 4, 255);
+    font-weight:bold;
+    position:absolute;
+    top:10px;
+    left:70px;
+    
+}
+.footer{
+    text-align: center;
+    margin-top:20px;
+}

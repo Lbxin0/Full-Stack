@@ -1,0 +1,7 @@
+.container{
+    width:850px
+}
+#dv2{height:300px;}
+#dv1{padding-top:200px}
+#dv2,#dv1{width:830px;border:2px solid red; margin:0 auto}
+#dv2 img{margin-left:15px; margin-top:8px}

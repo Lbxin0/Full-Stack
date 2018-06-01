@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0
+}
+
+body{
+    font-size:16px;
+    overflow: hidden;
+}
+a{
+    font-size:13px;
+    color:#999
+}
+a:hover{
+    cursor:pointer;
+    color:red;
+    text-decoration:none;
+}
+.containers{
+    width:100%;
+    display:flex;
+    background:#CCC;
+    padding:0 25px
+}
+
+
+.containe{
+    width:100%;
+    background:#CCC;
+    display:flex;
+}
+.left{
+    flex: 1;
+    float: left;
+    background:red;
+
+}
+.centers{
+    flex: 1;
+    background:pink;
+}
+.right{
+    flex: 1;
+    float:right;
+    background:green;
+}
+
+
+
+
+
+
+.containers div{
+    display:inline-block;
+
+}
+.header-left{
+    float:left;
+    width:150px;
+}
+.header-center{
+    flex:1;
+    width:500px
+}
+.header-right{
+    float:right;
+    width:90px;
+}
+.header-right div{
+    margin-right:5px
+}
+.header{
+    background:#ccc
+}
+.tourisms{
+    position: relative;
+    cursor: pointer;
+}
+
+.tourisms:hover .Tourismimg{
+    display: block;
+    transition-duration:1s
+}
+.Tourismimg{
+    position: absolute;
+    top: 25px;
+    left: -110px;
+    width: 150px;
+    height: auto;
+    float: left;
+    display:none;
+    cursor:pointer;
+    border: 1px solid #ccc;
+}
+#container span .Tourismimg:hover{
+    width:240px;
+    top:25px;
+    left:-200px;
+    border-top:#ccc;
+    border-image: linear-gradient( blue,red,rgb(225, 0, 255)) 30 30;
+}
+.communitys{
+    right:50px;
+    position:relative;
+    cursor:pointer;
+}
+.communitys:hover .communityimg{
+    display:block;
+}
+.communityimg{
+    width:150px;
+    cursor:pointer;
+    position:absolute;
+    top:25px;
+    left:-110px;
+    display:none;
+    border:1px solid #ccc;
+    transition-duration:1s
+}
+.communityimg:hover{
+    width:240px;
+    left:-200px;
+    border-image:linear-gradient( blue,red,rgb(225, 0, 255)) 30 30;
+    
+
+}

@@ -1,0 +1,87 @@
+
+html{
+    font-size: 62.5%
+}
+body{
+    font-size:15px !important;
+    margin:0.5rem auto
+}
+.basicdata,.skills,.interest,.hope{
+    background:rgb(0, 13, 129);
+    color:white;
+    padding:0.8rem 1.2rem;
+    box-sizing: border-box
+}
+.basicdata{
+    padding-top:3rem
+}
+.basicdata .header,.skills .header,.interest .header,.hope .header{
+    background:rgb(255, 153, 19);
+    line-height:2.5rem;
+    padding-left:0.5rem;
+    text-align: left
+}
+.interest{
+    text-align: center
+}
+.basicdata span,.skills span,.hope span{
+    display:block;
+    margin-top:0.8rem
+}
+.interest span{
+    display:inline-block;
+    margin:1.02rem;
+    position:relative;
+    padding:0.4rem
+}
+
+.interest span img{
+    width:5.5rem; 
+    height:3.5rem;
+    position: absolute;
+    top:0;
+    left:0
+}
+.titles{
+    top:2.5rem
+}
+.basicdata span img{
+    width:1.5rem; 
+    height:auto
+}
+.skills span img{
+    width:3.5rem; 
+    height:auto
+}
+.resumeright{
+    background:rgb(216, 216, 216)
+}
+.right-top .top-left header{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:30px
+}
+.top-left span{
+    font-size:18px;
+    font-weight: bolder
+    
+}
+.spancolor{
+    margin-left:20px;
+    width:120px;
+    height:10px;
+    display:inline-block;
+    background:pink
+}
+
+.resume ul li span{
+    color:rgb(253, 187, 6);
+    margin-left:95px
+}
+.resume ul li span span{
+    margin-left:50px
+}
+.resume-js{
+    margin-left:25px;
+    color:rgb(75, 75, 75) !important;
+}

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lbxi科技网</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/welcome.css">
+</head>
+<body style=" background-repeat:no-repeat ;background-size:100% 100%; background-attachment: fixed;opacity:0.8" >
+    <div id="all" class="containers">
+        <div id="content">
+                    <div id="marquee-txt">
+                        <img src="image/Polygon practice/1.jpg" style="width:360px;height:200px">
+                        <marquee id="marquee-content">welcome to Lbxin科技网</marquee>
+                    </div>
+        </div>
+        <!--旧版幽灵式-->
+            <!--<div id="div-btn">
+                <div id="div-group" class="home">
+                    <div id="div-top"></div>
+                        <a href="about.html">Home Page</a>
+                    <div id="div-bottom"></div>
+                </div>
+                <div id="div-group" class="case">
+                    <div id="div-top"></div>
+                        <a href="./example/music.html">Small Case</a>
+                    <div id="div-bottom"></div>
+                </div>
+            </div>
+        -->
+        <div id="app" class="nav">
+            <div class="nav-list"  v-for="listitem in listitems" :style="{backgroundImage:'url(' + listitem.src + ')'}">
+                    <span class="list-add" ><a :href="listitem.href">{{listitem.listadd}}</a></span>
+            </div>
+        </div>
+    </div>
+  <script>
+      var app=new Vue({
+          el:"#app",
+          data:{
+              listitems:[
+                  {listadd:"我的简历",src:"./image/welcome/resume.png",href:"resume.html"},
+                  {listadd:"我的工作",src:"./image/welcome/work.png"},
+                  {listadd:"我的主页",src:"./image/welcome/homepage.png",href:"index.html"},
+                  {listadd:"我的书架",src:"./image/welcome/bookshelf.png",href:"bookshelf.html"},
+                  {listadd:"我的作品",src:"./image/welcome/production.png"},
+                  {listadd:"优秀社区推荐",src:"./image/welcome/Community.png",href:"Community.html"}
+              ]
+          }
+      })
+  </script>
+</body>
+</html>

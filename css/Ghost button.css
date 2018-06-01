@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0;}
+body{ background:rgba(153,153,153,0.3)}
+#div-btn{ width:1000px;display:flex;justify-content:space-between; margin:100px auto}
+#div-group{ height:100px; width:250px; background:blue;position:relative;text-align:center;; color:#fff; }
+#div-top{ background:rgba(255,255,255,1); width:0; height:10px; position:absolute; top:0; right:0}
+#div-bottom{ background:rgba(255,255,255,1); width:0; height:10px; position:absolute; bottom:0; left:0}
+#div-group a{ text-decoration:none; color:#fff; font:bold 20px Arial;line-height:100px}
+#div-group:hover{ background:#fff; transition:.3s}
+#div-group:hover a{ color:blue; transition:.3s}
+#div-group:hover #div-top{ width:100%; transition:.3s; background:blue}
+#div-group:hover #div-bottom{ width:100%;transition:.3s; background:blue}
+
+
+
+
+
