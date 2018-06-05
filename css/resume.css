@@ -20,7 +20,10 @@ a:hover{
     text-align: center;
 }
 .bgcS{
-    background:rgb(241, 241, 241)
+    background:rgb(241, 241, 241);
+}
+.bgcS img{
+    width:100%;
 }
 .bgcB{
     background:rgb(189, 188, 188)
