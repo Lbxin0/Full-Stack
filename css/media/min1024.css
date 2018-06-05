@@ -1,0 +1,9 @@
+.nav{
+    height:122px;
+}
+.nav .nav-list:nth-child(1){
+    margin-left:0
+}
+.nav .nav-list{
+    line-height:110px
+}
