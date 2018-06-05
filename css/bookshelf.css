@@ -10,7 +10,7 @@ ul li{
     list-style:none;
 }
 .imgtop{
-    overflow: hidden;
+    width:100%
 }
 .bookul{
     background:url("../image/bookshelf/bookshelfmiddle.jpg") repeat-y left top;
