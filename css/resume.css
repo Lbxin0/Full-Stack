@@ -2,6 +2,9 @@
     padding:0;
     margin:0;
 }
+.lineHeight25{
+    line-height:25px;
+}
 body{
     padding:20px 80px;
     min-width: 700px;
@@ -20,7 +23,14 @@ a:hover{
     text-align: center;
 }
 .bgcS{
-    background:rgb(241, 241, 241);
+    background:rgb(219, 219, 219);
+    vertical-align: middle !important
+}
+.bgcS ol li{
+    list-style: none;
+} 
+.skillsbgcs{
+    color:rgb(243, 243, 243);
 }
 .bgcS img{
     width:100%;
@@ -35,7 +45,7 @@ a:hover{
     padding-right:10px !important
 }
 .skill{
-    list-style:decimal;
+    list-style:none;
     
 }
 .theader{
