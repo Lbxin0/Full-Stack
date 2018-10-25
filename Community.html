@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Excellent community</title>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/vue/2.5.13/vue.min.js"></script>
-		<script type="text/javascript" src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="./css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/community.css" />
-    <script src="./js/community.js"></script>
+    <style>
+        @media screen and (max-width: 500px) {
+      .container{
+          font-size: 20px!important
+      }
+    .rightlisttitle{
+     width: 75%;
+     margin: 0 auto;
+     
+    }
+    .rightlisttitle .listtitle{
+        font-size: 24px
+    }
+    .rightlisttitle img{
+        width: 100%
+    }
+}
+
+    </style>
 </head>
+
 <body>
     <div id="app" class="container">
-            <div class="row">
-                <div class="col-md-3 left">
-                    <div class="title">
-                        <img width="120px" src="./image/community.jpg"><br>
-                        <span class="titlespan">Excellent <span style="color:#aaa;font-weight:bold">community</span></span><br>
-                        <small>精选优质社区</small><br>
-                    </div>
-                    <div class="navbar list-group">
-                        <router-link to="/design" class="list-group-item">设计</router-link>
-                        <router-link to="/article" class="list-group-item">艺术</router-link>
-                        <router-link to="/audio" class="list-group-item">音影</router-link>
-                        <router-link to="/tool" class="list-group-item">工具</router-link>
-                        <router-link to="source" class="list-group-item">素材</router-link>
-                        <router-link to="/inspiration" class="list-group-item">灵感</router-link>
-                        <router-link to="/brain" class="list-group-item">在线作品集</router-link>
-                    </div>
+        <div class="row">
+            <div class="col-md-3 left">
+                <div class="title">
+                    <img width="120px" src="./image/community/community.jpg"><br>
+                    <span class="titlespan">Excellent <span style="color:#aaa;font-weight:bold">community</span></span><br>
+                    <small>精选优质社区</small><br>
                 </div>
-                <div class="col-md-9 right">
-                        <router-view></router-view>
+                <div class="navbar list-group">
+                    <router-link to="/design" class="list-group-item">设计</router-link>
+                    <router-link to="/elm" class="list-group-item">饿了么</router-link>
+                    <router-link to="/audio" class="list-group-item">音影</router-link>
+                    <router-link to="/tool" class="list-group-item">工具</router-link>
+                    <router-link to="source" class="list-group-item">素材</router-link>
+                    <router-link to="/inspiration" class="list-group-item">图书馆</router-link>
+                    <router-link to="/brain" class="list-group-item">在线作品集</router-link>
                 </div>
             </div>
+            <div class="col-md-9 right">
+                <router-view></router-view>
+                <!-- style="display:flex;text-item:center" -->
+            </div>
+        </div>
     </div>
     <template id="design">
-       <div id="vuedesign" >
-       <div class="vuedesignheader">设计</div>
-       <div class="listcontainer">
-          <span class="rightlisttitle"  v-for="rightlist in books">
-              <a :href="rightlist.href">
-                <strong class="listtitle">{{rightlist.title}}<br><small>{{rightlist.introduce}}</small>
-                    <br><small>{{rightlist.Enintroduce}}</small></strong>
-                <img :src="rightlist.src">
-            </a>
-            <span class="rightbtm"><img id="hert" src="./image/community/heart.png"></span>
-          </span>
+        <div id="vuedesign">
+            <div class="vuedesignheader">设计</div>
+            <div class="listitem" style="display:flex;text-align: center">
+                <div class="listcontainer" style="margin:0 auto">
+                    <span class="rightlisttitle" v-for="rightlist in comlists">
+                        <a :href="rightlist.href">
+                            <strong class="listtitle">{{rightlist.title}}<br><small>{{rightlist.introduce}}</small>
+                                <br><small>{{rightlist.Enintroduce}}</small></strong>
+                            <img :src="rightlist.src">
+                        </a>
+                        <span class="rightbtm"><img id="hert" src="./image/community/heart.png"></span>
+                    </span>
+                </div>
+            </div>
         </div>
-       </div>
     </template>
-    <template id="article">
-        <div class="vuedesignheader">艺术</div>
+    <template id="elm">
+        <div class="content">
+            <div class="vuedesignheader">饿了么</div>
+            <!-- {{items}} -->
+
+            <div class="listitem" v-for="item in items">
+                <img :src="item.image" :title="item.name">
+                <h3>{{item.name}}</h3>
+            </div>
+        </div>
+
     </template>
     <template id="audio">
-        <div class="vuedesignheader">影音</div>
+        <div class="content">
+            <div class="vuedesignheader">影音</div>
+
+
     </template>
     <template id="tool">
         <div class="vuedesignheader">工具</div>
@@ -64,76 +96,178 @@
         <div class="vuedesignheader">素材</div>
     </template>
     <template id="inspiration">
-        <div class="vuedesignheader">灵感</div>
+        <div class="content">
+            <div class="vuedesignheader ">在线图书馆</div>
+            <div class="listitem" style="display:flex;text-align: center">
+                <div class="listcontainer" style="margin:0 auto">
+                    <div class="listitem">
+                        <ul class="bookul">
+                            <li v-for="book in books">
+                                <a :href="book.href">
+                                    <img :src="book.src" :title="book.title">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </template>
     <template id="brain">
-        <div class="vuedesignheader">脑洞</div>
+        <div class="content">
+            <div class="vuedesignheader">在线作品集</div>
+            <div class="listitem" v-for="item in comlists">
+                <a :href="item.href">
+                    <img :src="item.src" :title="item.title">
+                    <h3>{{item.introduce}}</h3>
+                </a>
+            </div>
+        </div>
     </template>
-<script>
-const Design=Vue.extend({
-    template:"#design",
-    data(){
-        return{
-            books:[
-                {src:"./image/community/198cc4aa43548069892bab5c3207f663.png",Enintroduce:"Friend with design",introduce:"国内知名视觉设计师社区",title:"视觉中国",href:"http://shijue.me/"},
-                {src:"./image/community/21eafce001739230ca544e5763913b8b.jpg",Enintroduce:"Play with creativity",introduce:"国内知名综合设计师社区",title:"站酷",href:"http://www.zcool.com.cn/"},
-                {src:"./image/community/2a43ddc477ea389606658bfc33b1a735.png",Enintroduce:"Being a life Designer",introduce:"采集你最美的爱图",title:"花瓣",href:"http://huaban.com/"},
-                {src:"./image/community/361e42b731873ce497ee64c3cfe86a7f.png",Enintroduce:"Youth Design Network",introduce:"专注于年轻",title:"Wevux",href:"http://wevux.com/"},
-                {src:"./image/community/4948fd268ac5dc15c662dd823ca3c0f2.jpg",Enintroduce:"Visual impact of game",introduce:"热门游戏视觉网",title:"Artstation",href:"https://www.artstation.com/"},
-                {src:"./image/community/67f5a86fccfb053366983bb32ceaa80c.jpg",Enintroduce:"Where Designers Get Inspired And Hired",introduce:"启发设计师平台",title:"Dribbble",href:"https://dribbble.com/"},
-                {src:"./image/community/67f5a86fccfb053366983bb32ceaa822.bmp",Enintroduce:"The Global Network For Creatives",introduce:"全球创意设计",title:"Uplabs",href:"https://www.uplabs.com/"},
-                {src:"./image/community/94ae1ab2db995da864656da699695848.png",Enintroduce:"Find good design",introduce:"国内新鲜设计平台",title:"设计癖",href:"http://www.shejipi.com/"},
-                {src:"./image/community/9afce7cea33b1f270fa61a168bc790cc.bmp",Enintroduce:"Magazine wind vane",introduce:"设计类杂志圣经",title:"Wallpaper",href:"https://www.wallpaper.com/"},
-                {src:"./image/community/ad3c8637802b4a1d860765c88d1a1499.png",Enintroduce:"Landing Page Design Inspiration",introduce:"网页设计灵感库",title:"Lapa",href:"https://www.lapa.ninja/"},
-                {src:"./image/community/af498e4360d9202d248fee6c0317f871.jpg",Enintroduce:"design intern portfolios",introduce:"顶尖设计实习生",title:"Cofolios",href:"http://cofolios.com/"},
-                {src:"./image/community/b53c0cf8df102608219259bbb15ccce55.bmp",Enintroduce:"Global design classroom",introduce:"国外设计作品集",title:"全球设计精品收录",href:"http://www.doooor.com/"},
-              
-              
-            ]
-        }
-    }
-});
-const article=Vue.extend({
-    template:"#article"
-});
-const audio=Vue.extend({
-    template:"#audio"
-});
-const tool=Vue.extend({
-    template:"#tool"
-});
-const source=Vue.extend({
-    template:"#source"
-});
-const inspiration=Vue.extend({
-    template:"#inspiration"
-});
-const brain=Vue.extend({
-    template:"#brain"
-});
+    <script src="./js/jquery.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.js"></script>
+    <script type="text/javascript" src="./js/vue-router.js"></script>
+    <!-- <script src="./js/community.js"></script> -->
 
-const routes=[
-    {path:"/design",component:Design},
-    {path:"/article",component:article},
-   {path:"/audio",component:audio},
-    {path:"/tool",component:tool},
-    {path:"/source",component:source},
-    {path:"/inspiration",component:inspiration},
-    {path:"/brain",component:brain},
-    {path:'/',redirect:'/design'}
+    <script>
+        const Design = Vue.extend({
+            template: "#design",
+            data() {
+                return {
+                    comlists: [
+                        { src: "./image/community/198cc4aa43548069892bab5c3207f663.png", Enintroduce: "Friend with design", introduce: "国内知名视觉设计师社区", title: "视觉中国", href: "http://shijue.me/" },
+                        { src: "./image/community/21eafce001739230ca544e5763913b8b.jpg", Enintroduce: "Play with creativity", introduce: "国内知名综合设计师社区", title: "站酷", href: "http://www.zcool.com.cn/" },
+                        { src: "./image/community/2a43ddc477ea389606658bfc33b1a735.png", Enintroduce: "Being a life Designer", introduce: "采集你最美的爱图", title: "花瓣", href: "http://huaban.com/" },
+                        { src: "./image/community/361e42b731873ce497ee64c3cfe86a7f.png", Enintroduce: "Youth Design Network", introduce: "专注于年轻", title: "Wevux", href: "http://wevux.com/" },
+                        { src: "./image/community/4948fd268ac5dc15c662dd823ca3c0f2.jpg", Enintroduce: "Visual impact of game", introduce: "热门游戏视觉网", title: "Artstation", href: "https://www.artstation.com/" },
+                        { src: "./image/community/67f5a86fccfb053366983bb32ceaa80c.jpg", Enintroduce: "Where Designers Get Inspired And Hired", introduce: "启发设计师平台", title: "Dribbble", href: "https://dribbble.com/" },
+                        { src: "./image/community/67f5a86fccfb053366983bb32ceaa822.bmp", Enintroduce: "The Global Network For Creatives", introduce: "全球创意设计", title: "Uplabs", href: "https://www.uplabs.com/" },
+                        { src: "./image/community/94ae1ab2db995da864656da699695848.png", Enintroduce: "Find good design", introduce: "国内新鲜设计平台", title: "设计癖", href: "http://www.shejipi.com/" },
+                        { src: "./image/community/9afce7cea33b1f270fa61a168bc790cc.bmp", Enintroduce: "Magazine wind vane", introduce: "设计类杂志圣经", title: "Wallpaper", href: "https://www.wallpaper.com/" },
+                        { src: "./image/community/ad3c8637802b4a1d860765c88d1a1499.png", Enintroduce: "Landing Page Design Inspiration", introduce: "网页设计灵感库", title: "Lapa", href: "https://www.lapa.ninja/" },
+                        { src: "./image/community/af498e4360d9202d248fee6c0317f871.jpg", Enintroduce: "design intern portfolios", introduce: "顶尖设计实习生", title: "Cofolios", href: "http://cofolios.com/" },
+                        { src: "./image/community/b53c0cf8df102608219259bbb15ccce55.bmp", Enintroduce: "Global design classroom", introduce: "国外设计作品集", title: "全球设计精品收录", href: "http://www.doooor.com/" },
 
-];
-const router=new VueRouter({
-    routes:routes
-})
-var app=new Vue({
-    router:router,
-}).$mount("#app")
+                    ]
+
+                }
+            }
+        });
+        var elm = Vue.extend({
+
+            template: "#elm",
+            data() {
+                return {
+                    items: [],
+                    ddd: "555555"
+                }
+            },
+            mounted: function () {
+                // this.$http.get('https://x0516.github.io/Full-Stack/elmdata.json').then(function(res){
+                //     consloe.log(res)
+                // });  
+                var _this = this;
+                $.ajax({
+                    url: "https://x0516.github.io/Full-Stack/elmdata.json",
+                    success: function (res) {
+                        _this.items = res.goods[0].foods;
+                        console.log(res)
+
+                    }
+                })
+            }
+        });
+        const audio = Vue.extend({
+            template: "#audio"
+        });
+        const tool = Vue.extend({
+            template: "#tool"
+        });
+        const source = Vue.extend({
+            template: "#source"
+        });
+        const inspiration = Vue.extend({
+            template: "#inspiration",
+            data() {
+                return {
+                    books: [
+                        { src: "./image/bookshelf/2018-05-16_233256.jpg", title: "Python基础知识培训", href: "https://pan.baidu.com/s/1yJhHjwHe0Rd0HuvjN7oIKA" },
+                        { src: "./image/bookshelf/2018-05-16_233217.jpg", title: "vue2.0实战揭秘", href: "https://pan.baidu.com/s/13DAwa8tYrdJRNxD1KkngkA" },
+                        { src: "./image/bookshelf/2018-05-16_233306.jpg", title: "你不知道的JavaScript中卷", href: "https://pan.baidu.com/s/1iPVZKkNYycg6RVfV0H2nrg" },
+                        { src: "./image/bookshelf/2018-05-16_233337.jpg", title: "响应式Web设计-HTML5和CSS3实战", href: "https://pan.baidu.com/s/10gbUELkGp0H976PqBeab1A" },
+                        { src: "./image/bookshelf/2018-05-16_233420.jpg", title: "大型网站框架分析", href: "https://pan.baidu.com/s/1dcuNkFpkTohKvpTcLs2neg" },
+                        { src: "./image/bookshelf/2018-05-16_233447.jpg", title: "精彩绝伦的css", href: "https://pan.baidu.com/s/1WwxmAwzqRadAJmul4yWF0A" },
+                        { src: "./image/bookshelf/2018-05-16_233517.jpg", title: "NODE.js入门手册", href: "https://pan.baidu.com/s/1rOR5-mli38e8FV6BhGj2GQ" },
+                        { src: "./image/bookshelf/2018-05-16_233559.jpg", title: "Web标准之道", href: "https://pan.baidu.com/s/14mzMdvaVWiX7e6z_NzjNMw" },
+                        { src: "./image/bookshelf/2018-05-16_233636.jpg", title: "JavaScript框架高级编程", href: "https://pan.baidu.com/s/1uXcQAu2Xxg7KbNjInjgc-Q" },
+                        { src: "./image/bookshelf/2018-05-16_233719.jpg", title: "JavaScript.DOM高级程序设计", href: "https://pan.baidu.com/s/1kwl0nAPvtcbqY8QHflih9w" },
+                        { src: "./image/bookshelf/2018-05-16_233769.jpg", title: "GitHub入门与实践", href: "https://pan.baidu.com/s/1w1pEXlg4xl78HaRZkgzO6g" },
+                        { src: "./image/bookshelf/2018-05-28_223334.jpg", title: "Git版本控制管理 第2版", href: "https://pan.baidu.com/s/1Lx6IxMSRznE7oHVoPQjE1g" },
+                        { src: "./image/bookshelf/2018-05-28_224134.jpg", title: "廖雪峰 JavaScript Python Git 教程", href: "https://pan.baidu.com/s/1owSg3pfpKngCZGES1JTOeQ" },
 
 
+                    ]
+                }
+            }
+        });
+        const brain = Vue.extend({
+            template: "#brain",
+            data() {
+                return {
+                    comlists: [
+                        { src: "./image/brain/2018-10-25_201426.jpg", introduce: "Vue自定义事件", title: "按钮联动事件", href: "https://x0516.github.io/-project/vue%20practice/vue-router.html" },
+                        { src: "./image/brain/2018-10-25_205618.jpg", introduce: "SOUFEEL索菲尔纽约时尚珠宝", title: "爱的感觉就是索菲尔", href: "https://x0516.github.io/Test/SOUFEEL/index.html" },
+                        { src: "./image/brain/2018-10-25_211149.jpg", introduce: "个人主页--U灵主页", title: "个人项目练习", href: "https://x0516.github.io/Test/华联招聘/华联招聘.HTML" },
+                        { src: "./image/brain/2018-10-25_210218.jpg", introduce: "幻声官网", title: "Lbxin", href: "https://x0516.github.io/Test/17-05-20%20幻声官网/幻声官网.html" },
+                        { src: "./image/brain/2018-10-25_205511.jpg", introduce: "U灵主页", title: "主页", href: "https://x0516.github.io/Test/个人主页/U灵主页.html" },
+                        { src: "./image/brain/2018-10-25_213051.jpg", introduce: "我的相册", title: "time-picture", href: "https://x0516.github.io/Test/个人主页/我的相册.html" },
+                        { src: "./image/brain/2018-10-25_215211.jpg", introduce: "Lbxin开始页", title: "Lbxin", href: "https://x0516.github.io/Test/个人主页/U灵%20welcome.html" },
+                        { src: "./image/brain/2018-10-25_215602.jpg", introduce: "ihandy科技网", title: "一家相对低调的公司", href: "https://x0516.github.io/Test/ihandy/index.html" },
+                        { src: "./image/brain/2018-10-25_220449.jpg", introduce: "Full-Stack科技网", title: "GER", href: "https://x0516.github.io/Test/Full-Stack/index.html" },
+                        { src: "https://x0516.github.io/Full-Stack/image/index/PolygonPractice.jpg", introduce: "Full-Stack旋转木马", title: "媛媛", href: "https://x0516.github.io/Full-Stack/example/Polygon%20practice.html" }
 
-//Jquery区
-//$(".rightbtm>img").attr('src','./image/community/heartclick.png')
-</script>
+                    ]
+
+                }
+            }
+
+        });
+
+        const routes = [
+            { path: "/design", component: Design },
+            { path: "/elm", component: elm },
+            { path: "/audio", component: audio },
+            { path: "/tool", component: tool },
+            { path: "/source", component: source },
+            { path: "/inspiration", component: inspiration },
+            { path: "/brain", component: brain },
+            { path: '/', redirect: '/design' }
+
+        ];
+        const router = new VueRouter({
+            routes: routes
+        })
+        var app = new Vue({
+            router: router,
+
+        }).$mount("#app")
+
+	// $.ajax({
+	//   url: "https://x0516.github.io/Full-Stack/elmdata.json",
+	//   success: function (res) {
+	//     console.log(res.goods);
+	//   //   elm.items=res.goods
+	//     elm.ddd="999999999999999"
+	//   }
+	// })
+
+	//Jquery区
+	//$(".rightbtm>img").attr('src','./image/community/heartclick.png')
+
+
+    </script>
+
 </body>
+
 </html>
