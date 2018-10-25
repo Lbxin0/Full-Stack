@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  color: rgba(51, 51, 51, 0.9);
+}
+a:hover {
+  text-decoration: none;
+}
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  overflow: hidden;
+  font-family: Microsoft YaHei, Helvetica Neue, Helvetica, Roboto, Segoe UI,
+    Arial, sans-serif;
+}
+.vuedesignheader {
+  line-height: 50px;
+  background: rgb(179, 179, 179);
+  padding-left: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 17, 255);
+  letter-spacing: 5px;
+  text-align: center;
+}
+.content .listitem,
+#brain .listitem {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 35px;
+  margin-right: 20px;
+  text-align: center;
+}
+.listcontainer {
+  width: 100%;
+  margin: 0px 30px;
+}
+.left {
+  background: rgb(192, 230, 255);
+  height: 100%;
+  text-align: center;
+}
+.right {
+  background: rgb(218, 218, 218);
+}
+.title {
+  display: block;
+  font-size: 20px;
+}
+.title img {
+  border: 1px solid rgba(0, 128, 0, 0.8);
+  margin-top: 10px;
+}
+.title small {
+  font-size: 100%;
+  letter-spacing: 3px;
+  margin-top: 1px;
+  display: block;
+}
+.navbar {
+  width: 100%;
+  text-align: center;
+}
+
+/*right开始*/
+.rightcontainer {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+}
+.rightcontainer .rightitem {
+  flex: 1;
+  width: 100px;
+  border: 1px solid green;
+  margin: 5px;
+}
+.right {
+  padding-left: 0px;
+}
+.right img {
+  width: 200px;
+  height: 180px;
+}
+.vuedesign,
+#brain {
+  width: 120px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+.rightlisttitle {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 35px;
+  margin-right: 20px;
+}
+.rightlisttitle .rightbtm {
+  cursor: pointer;
+}
+.rightlisttitle .rightbtm img {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+}
+.rightlisttitle a {
+  color: rgb(255, 0, 242);
+  font-weight: bolder;
+  font-size: 19px;
+}
+.rightlisttitle a:hover {
+  color: red;
+  transition-duration: 1s;
+}
+.rightlisttitle .listtitle {
+  /* width:200px;
+    height: 180px; */
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -40px;
+}
+.right .content {
+  text-align: center;
+}
+.right .content h3 {
+  max-width: 200px;
+  /* max-height: 25px; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 图书列表样式 */
+.bookul {
+  /* background:url("../image/bookshelf/bookshelfmiddle.jpg") repeat-y left top; */
+  width: 100%;
+}
+.bookul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.bookul li img {
+  width: 155px;
+  height: 240px;
+  padding: 6px 7px 27px 7px;
+  transform: rotateX(10deg);
+  transform-origin: bottom;
+  perspective: 500px;
+}
+.books {
+  position: relative;
+}
