@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #d4ebe8;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.header {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 5px;
+  &::after {
+    content: " ";
+    width: 50%;
+    display: block;
+    height: 2px;
+    background: pink;
+    margin: 0 auto;
+  }
+}
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > ul {
+    width: 6px;
+    height: auto;
+    > li {
+      width: 6px;
+      height: 150px;
+      background: #fff;
+      position: relative;
+      transform: translatex(0px);
+      &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        transform: translateX(-40%);
+        position: absolute;
+        top: 10px;
+      }
+      > .time_content {
+        width: 260px;
+        padding: 15px 0px;
+        position: absolute;
+        left: 45px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 20px 20px #4fbdbc;
+        transition-duration: 0.5s;
+        &:hover {
+          cursor: pointer;
+          transform: translate(-8px, -8px);
+          box-shadow: 40px 40px #4fbdbc;
+        }
+        &::before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          position: absolute;
+          left: -10px;
+          transform: rotate(45deg);
+          top: 15px;
+        }
+        // 阴影效果失效
+        // &::after {
+        //   content: "";
+        //   display: block;
+        //   box-shadow: 55px 55px #4fbdbc;
+        // }
+        h3 {
+          padding: 5px 20px;
+          font-size: 36px;
+          padding-left: 10px;
+        }
+        ul {
+          width: 100%;
+          li {
+            line-height: 25px;
+            z-index: 10;
+            position: relative;
+            padding: 5px 20px;
+          }
+        }
+      }
+      &:nth-child(even) .time_content {
+        color: red;
+        transform: translatex(-350px);
+        position: relative;
+        text-align: right;
+        box-shadow: -20px 20px #4fbdbc;
+        &::before {
+          display: none;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          position: absolute;
+          right: -10px;
+          transform: rotate(45deg);
+          top: 15px;
+        }
+        &:hover {
+          cursor: pointer;
+          transform: translate(-340px, -10px);
+          box-shadow: -40px 40px #4fbdbc;
+        }
+      }
+    }
+  }
+  button {
+    position: fixed;
+    right: 25px;
+    bottom: 120px;
+  }
+}
